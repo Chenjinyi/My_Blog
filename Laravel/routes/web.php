@@ -11,6 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+//BLOG 页面
+Route::get('/','IndexController@index');
+//BLOG文章
+Route::get('/posts/{posts}','IndexController@posts');
