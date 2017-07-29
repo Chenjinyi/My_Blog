@@ -55,16 +55,16 @@
             </ul>
         </nav>
         <div class="page-title">
-            <img src="/images/person_1.jpg" alt="Free HTML5 by FreeHTMl5.co">
-            <span> time </span>
-            <h2> Title </h2>
+            <img src="/images/person_2.jpg" alt="Free HTML5 by FreeHTMl5.co">
+            <span>{{$posts->created_at}}</span>
+            <h2>{{$posts->title}} </h2>
         </div>
     </div>
     <div id="fh5co-main-content">
         <div class="fh5co-post">
             <div class="fh5co-entry padding">
                 <div>
-                        {{--详细内容--}}
+                       {{$posts->content}}
                 </div>
             </div>
 
@@ -78,11 +78,11 @@
     <div class="fh5co-cover prev fh5co-cover-sm" style="background-image: url(/images/project-4.jpg)">
         <div class="overlay"></div>
 
-        <a class="copy" href="#">
+        <a class="copy" href="/posts/{{$posts->id-1}}">
             <div class="display-t">
                 <div class="display-tc">
                     <div>
-                        <span>Previous Post</span>
+                        <span>上一篇文章</span>
                         <h2>Last</h2>
                     </div>
                 </div>
@@ -92,11 +92,11 @@
     </div>
     <div class="fh5co-cover next fh5co-cover-sm" style="background-image: url(/images/project-5.jpg)">
         <div class="overlay"></div>
-        <a class="copy" href="#">
+        <a class="copy" href="/posts/{{$posts->id+1}}">
             <div class="display-t">
                 <div class="display-tc">
                     <div>
-                        <span>Next Post</span>
+                        <span>下一篇文章</span>
                         <h2>Next</h2>
                     </div>
                 </div>

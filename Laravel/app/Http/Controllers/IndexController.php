@@ -3,15 +3,21 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Posts;
 
 class IndexController extends Controller
 {
     //BLOG 主页
     public function index(){
-        return view('index');
+        $posts = Posts::all();
+        return view('index',compact('posts'));
     }
     //BLOG 文章
-    public function posts(){
-        return view('posts');
+    public function posts(Request $request){
+        //获取文章
+        $id=$request->posts;
+        $posts = Posts::find($id);
+
+        return view('posts',compact('posts'));
     }
 }

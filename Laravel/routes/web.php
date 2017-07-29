@@ -15,3 +15,17 @@
 Route::get('/','IndexController@index');
 //BLOG文章
 Route::get('/posts/{posts}','IndexController@posts');
+
+//登录 注册
+Auth::routes();
+//个人中心
+Route::get('/home', 'HomeController@index')->name('home');
+
+//添加文章
+Route::get('/home/add','PostsController@posts')->middleware('auth');
+Route::post('/home/add','PostsController@add')->middleware('auth');
+//文章列表
+Route::get('/home/show','PostsController@show')->middleware('auth');
+//文章编辑
+Route::get('/home/{posts}/edit','PostsController@edit')->middleware('auth');
+Route::post('/home/update','PostsController@update')->middleware('auth');

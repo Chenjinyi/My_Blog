@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Story &mdash; Free Website Template, Free HTML5 Template by freehtml5.co</title>
+    <title>BLOG</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Free HTML5 Website Template by freehtml5.co" />
     <meta name="keywords" content="free website templates, free html5, free template, free bootstrap, free website template, html5, css3, mobile first, responsive" />
@@ -61,22 +61,16 @@
     </div>
     <div id="fh5co-main-content">
         <div class="fh5co-post">
+            @foreach($posts as $val)
             <div class="fh5co-entry padding">
-                <img src="/images/project-1.jpg" alt="Free HTML5 Bootstrap Template by FreeHTML5.co">
+                <img class="col-lg-2" src="/images/project-{{@rand(1,8)}}.jpg" alt="图片未加载" >
                 <div>
-                    <span class="fh5co-post-date">time</span>
-                    <h2><a href="single.html">Title</a></h2>
-                    <p>Content</p>
+                    <span class="fh5co-post-date">{{$val->created_at}}</span>
+                    <h2><a href="/posts/{{$val->id}}">{{$val->title}}</a></h2>
+                    <p>{{$val->subhard}}</p>
                 </div>
             </div>
-            <div class="fh5co-entry padding">
-                <img src="/images/project-2.jpg" alt="Free HTML5 Bootstrap Template by FreeHTML5.co">
-                <div>
-                    <span class="fh5co-post-date">time</span>
-                    <h2><a href="single.html">Title</a></h2>
-                    <p>Content</p>
-                </div>
-            </div>
+            @endforeach
             <footer>
                 <div>
                     <p>&copy; 2016 Free HTML5. All Rights Reserved. More Templates</p>
