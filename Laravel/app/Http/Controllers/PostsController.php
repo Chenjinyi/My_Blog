@@ -21,22 +21,37 @@ class PostsController extends Controller
             'content'=>'required|max:999|min:10',
         ]);
         //逻辑
-        $input = [
-            'title'=>$request->title,
-            'subhead'=>$request->subhead,
-            'content'=>$request->content,
-            'user_id'=>$user_id
-        ];
-        Posts::create($input);
+        $posts = new Posts();
+        $posts->title=\request('title');
+        $posts->subhead = \request('subhead');
+        $posts->content = \request('content');
+        $posts->user_id = $user_id;
+        $posts->save();
         //渲染
         return redirect('/home/show');
     }
     //编辑文章
-    public function edit(){
-        return view('home.edit');
+    public function edit(Request $request){
+        $id = $request->posts;
+        $posts = Posts::find($id);
+        return view('home.edit',compact('id','posts'));
     }
-    public function update(){
-
+    public function update(Request $request){
+        //验证
+        $id = $request->id;
+        $this ->validate($request,[
+            'title'=>'required|unique:posts,title|max:60|min:5',
+            'subhead'=>'required|max:120|min:5',
+            'content'=>'required|max:999|min:10',
+        ]);
+        //逻辑
+        $posts = Posts::find($id);
+        $posts-> title = request('title');
+        $posts-> subhead = request('subhead');
+        $posts-> content = request('content');
+        $posts->save();
+        //渲染
+        return redirect('home/show');
     }
     //文章列表
     public function show(){
@@ -44,4 +59,14 @@ class PostsController extends Controller
         $posts = Posts::where('user_id',$id)->get();
         return view('home.show',compact('posts'));
     }
+    //文章删除
+    public function del(Request $request){
+        //删除逻辑
+        $id = $request->posts;
+        Posts::find($id)->delete();
+        //渲染
+        return redirect('/home/show');
+    }
+
 }
+

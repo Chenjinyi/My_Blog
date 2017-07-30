@@ -28,11 +28,11 @@
                         </div>
                         <div class="sub-title">文章简介</div>
                         <div>
-                            <textarea name="subhead" class="form-control" rows="2"></textarea>
+                            <textarea name="subhead" class="form-control" rows="2">{{old('subhead')}}</textarea>
                         </div>
                         <div class="sub-title">文章内容</div>
                         <div>
-                            <textarea name="content" class="form-control" rows="8" ></textarea>
+                            <textarea name="content" class="form-control" rows="8" >{{old('content')}}</textarea>
                         </div>
                         <div class="sub-title"> @include('layouts.msg')</div>
                         <button type="submit" class="btn btn-primary">提交</button>

@@ -40,7 +40,8 @@
                                 <td>{{$val -> title}}</td>
                                 <td>{{$val ->subhead}}</td>
                                 <td>{{$val -> created_at}}</td>
-                                <td><a href="">编辑</a>|<a href="">删除</a></td>
+                                <td><a href="/home/{{$val->id}}/edit">编辑</a>|<a href="/home/{{$val->id}}/del" onclick="del()">删除</a></td>
+
                             </tr>
                                 @endforeach
                             </tbody>
@@ -60,5 +61,15 @@
         $(document).ready(function () {
             $('#dataTables-example').dataTable();
         });
+
+        function del() {
+            var msg = "您真的确定要删除吗？\n\n请确认！";
+            if (confirm(msg)==true){
+                return true;
+            }else{
+                return false;
+            }
+        }
     </script>
+
 @endsection

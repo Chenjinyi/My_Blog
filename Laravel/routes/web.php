@@ -29,3 +29,5 @@ Route::get('/home/show','PostsController@show')->middleware('auth');
 //文章编辑
 Route::get('/home/{posts}/edit','PostsController@edit')->middleware('auth');
 Route::post('/home/update','PostsController@update')->middleware('auth');
+//文章删除
+Route::get('/home/{posts}/del','PostsController@del')->middleware('auth');
