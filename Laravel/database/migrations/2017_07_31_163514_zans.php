@@ -13,13 +13,6 @@ class Zans extends Migration
      */
     public function up()
     {
-        Schema::create('zans', function (Blueprint $table) {
-            $table->increments('id');
-            $table->string('zan');
-            $table->string('user_id');
-            $table->string('post_id');
-            $table->timestamps();
-        });
     }
 
     /**
@@ -29,6 +22,5 @@ class Zans extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('zans');
     }
 }

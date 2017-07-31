@@ -18,8 +18,8 @@
                 <div class="panel panel-primary">
                     <div class="number">
                         <h3>
-                            <h3>44,023</h3>
-                            <small>Daily Visits</small>
+                            <h3>{{$view}}</h3>
+                            <small>浏览次数</small>
                         </h3>
                     </div>
                     <div class="icon">
@@ -35,8 +35,8 @@
                 <div class="panel panel-primary">
                     <div class="number">
                         <h3>
-                            <h3>32,850</h3>
-                            <small>Sales</small>
+                            <h3>{{$posts->count()}}</h3>
+                            <small>文章数</small>
                         </h3>
                     </div>
                     <div class="icon">
@@ -52,8 +52,8 @@
                 <div class="panel panel-primary">
                     <div class="number">
                         <h3>
-                            <h3>56,150</h3>
-                            <small>Comments</small>
+                            <h3>Bate 0.1</h3>
+                            <small>版本号</small>
                         </h3>
                     </div>
                     <div class="icon">
@@ -69,8 +69,8 @@
                 <div class="panel panel-primary">
                     <div class="number">
                         <h3>
-                            <h3>89,645</h3>
-                            <small>Daily Profits</small>
+                            <h3>{{Auth::user()->name}}</h3>
+                            <small>登录账户</small>
                         </h3>
                     </div>
                     <div class="icon">

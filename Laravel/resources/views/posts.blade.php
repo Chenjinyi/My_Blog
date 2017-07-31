@@ -51,7 +51,7 @@
         <div class="overlay"></div>
         <nav role="navigation">
             <ul>
-                <li><a href="index.html"><i class="icon-home"></i></a></li>
+                <li><a href="/"><i class="icon-home"></i></a></li>
             </ul>
         </nav>
         <div class="page-title">
@@ -64,6 +64,7 @@
         <div class="fh5co-post">
             <div class="fh5co-entry padding">
                 <div>
+                    <p>浏览次数:{{$posts->view}}  发布时间:{{$posts->created_at}}</p>
                        {{$posts->content}}
                 </div>
             </div>
@@ -108,8 +109,8 @@
 
 <footer>
     <div>
-        <p>&copy; 2016 Free HTML5. All Rights Reserved. More Templates</p>
-        <p>&copy; 2017 BLOG BY FRNARY</p>
+        <p>&copy; 2017 BLOG BY FRANRY</p>
+        <p>&copy; 2017 BLOG BY FRANRY</p>
     </div>
 </footer>
 

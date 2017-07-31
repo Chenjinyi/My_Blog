@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class Posts extends Migration
+class Markdown extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,14 @@ class Posts extends Migration
      */
     public function up()
     {
-        Schema::create('posts', function (Blueprint $table) {
+        Schema::create('markdown', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('title');
-            $table->text('subhead');
-            $table->text('content');
-            $table->string('user_id');
+            $table->string('title')->nullable();
+            $table->text('subhead')->nullable();
+            $table->text('content')->nullable();
+            $table->string('address')->nullable();
             $table->string('view')->default(1);
+            $table->string('user_id');
             $table->timestamps();
         });
     }
@@ -31,6 +32,6 @@ class Posts extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('posts');
+        Schema::dropIfExists('markdown');
     }
 }

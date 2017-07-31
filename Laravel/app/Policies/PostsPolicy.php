@@ -19,7 +19,8 @@ class PostsPolicy
     {
         //
     }
-    public function update(User $user,Posts $posts){
-        return $user->id === $posts->user_id;
+    public function update(User $user, Posts $post)
+    {
+        return $user->id === $post->user_id;
     }
 }

@@ -51,7 +51,7 @@
         <div class="overlay"></div>
         <nav role="navigation">
             <ul>
-                <li><a href="index.html"><i class="icon-home"></i></a></li>
+                <li><a href="/"><i class="icon-home"></i></a></li>
             </ul>
         </nav>
         <div class="featured">
@@ -71,6 +71,9 @@
                 </div>
             </div>
             @endforeach
+            <div class=" col-lg-12">
+                @include('layouts.default', ['paginator' => $posts])
+            </div>
             <footer>
                 <div>
                     <p>&copy; 2017 BLOG BY FRNARY</p>

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Posts;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -23,6 +24,11 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $posts = Posts::all();
+        $view = 0;
+        foreach ($posts as $val){
+           $view += $val->view;
+        }
+        return view('home',compact('posts','view'));
     }
 }

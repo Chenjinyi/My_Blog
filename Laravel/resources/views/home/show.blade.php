@@ -29,7 +29,7 @@
                                 <th class="text-center">ID</th>
                                 <th class="text-center">文章名字</th>
                                 <th class="text-center">简介</th>
-                                <th class="text-center">创建时间</th>
+                                <th class="text-center">创建时间|浏览次数</th>
                                 <th class="text-center">操作</th>
                             </tr>
                             </thead>
@@ -39,13 +39,13 @@
                                 <td >{{$val -> id}}</td>
                                 <td>{{$val -> title}}</td>
                                 <td>{{$val ->subhead}}</td>
-                                <td>{{$val -> created_at}}</td>
+                                <td>{{$val -> created_at}}｜{{$val->view}}</td>
                                 <td><a href="/home/{{$val->id}}/edit">编辑</a>|<a href="/home/{{$val->id}}/del" onclick="del()">删除</a></td>
-
                             </tr>
                                 @endforeach
                             </tbody>
                         </table>
+                        {{$posts->links()}}
                     </div>
                 </div>
             </div>

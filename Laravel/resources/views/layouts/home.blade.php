@@ -80,9 +80,11 @@
                         </li>
                     </ul>
                 </li>
+
                 <li>
-                    <a href="tab-panel.html"><i class="fa fa-qrcode"></i> Tabs & Panels</a>
+                    <a href="tab-panel.html"><i class="fa fa-qrcode"></i> 开发目录</a>
                 </li>
+                <!--
 
                 <li>
                     <a href="table.html"><i class="fa fa-table"></i> Responsive Tables</a>
@@ -117,6 +119,7 @@
                             </ul>
 
                         </li>
+                        -->
                     </ul>
                 </li>
                 <li>

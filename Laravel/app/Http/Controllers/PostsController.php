@@ -23,7 +23,7 @@ class PostsController extends Controller
         $this ->validate($request,[
             'title'=>'required|unique:posts,title|max:60|min:5',
             'subhead'=>'required|max:120|min:5',
-            'content'=>'required|max:999|min:10',
+            'content'=>'required|max:9999|min:10',
         ]);
         //逻辑
         $posts = new Posts();
@@ -44,15 +44,14 @@ class PostsController extends Controller
         $posts = Posts::find($id);
         return view('home.edit',compact('id','posts'));
     }
-    public function update(Request $request,Posts $posts){
+    public function update(Request $request,Posts $post){
         //验证
         $id = $request->id;
         $this ->validate($request,[
             'title'=>'required|unique:posts,title|max:60|min:5',
             'subhead'=>'required|max:120|min:5',
-            'content'=>'required|max:999|min:10',
+            'content'=>'required|max:9999|min:10',
         ]);
-
         //逻辑
         $posts = Posts::find($id);
         $posts-> title = request('title');
@@ -67,13 +66,13 @@ class PostsController extends Controller
     //文章列表
     public function show(){
         $id=Auth::id();
-        $posts = Posts::where('user_id',$id)->get();
+        $posts = Posts::where('user_id',$id)->orderBy('created_at','desc')->paginate(11);
         return view('home.show',compact('posts'));
     }
 
 
     //文章删除
-    public function del(Request $request){
+    public function del(Request $request,Posts $post){
         //删除逻辑
         $id = $request->posts;
         Posts::find($id)->delete();
