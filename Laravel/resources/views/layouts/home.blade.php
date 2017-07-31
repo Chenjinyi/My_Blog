@@ -134,7 +134,6 @@
         <div id="page-inner">
             @yield('content')
             <footer>
-                <p>Copyright &copy; 2016.Company name All rights reserved.</p>
                 <p>Copyright &copy; 2017.BLOG BY FRANARY.</p>
             </footer>
         </div>

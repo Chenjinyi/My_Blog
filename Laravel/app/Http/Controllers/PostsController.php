@@ -2,12 +2,17 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Controllers\Controller;
+use App\User;
 use Illuminate\Http\Request;
 use App\Posts;
 use Illuminate\Support\Facades\Auth;
 
 class PostsController extends Controller
 {
+
+
+
     //添加文章
     public function posts(){
         return view('home.add');
@@ -30,13 +35,16 @@ class PostsController extends Controller
         //渲染
         return redirect('/home/show');
     }
+
+
+
     //编辑文章
     public function edit(Request $request){
         $id = $request->posts;
         $posts = Posts::find($id);
         return view('home.edit',compact('id','posts'));
     }
-    public function update(Request $request){
+    public function update(Request $request,Posts $posts){
         //验证
         $id = $request->id;
         $this ->validate($request,[
@@ -44,6 +52,7 @@ class PostsController extends Controller
             'subhead'=>'required|max:120|min:5',
             'content'=>'required|max:999|min:10',
         ]);
+
         //逻辑
         $posts = Posts::find($id);
         $posts-> title = request('title');
@@ -53,12 +62,16 @@ class PostsController extends Controller
         //渲染
         return redirect('home/show');
     }
+
+
     //文章列表
     public function show(){
         $id=Auth::id();
         $posts = Posts::where('user_id',$id)->get();
         return view('home.show',compact('posts'));
     }
+
+
     //文章删除
     public function del(Request $request){
         //删除逻辑

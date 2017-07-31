@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class Posts extends Migration
+class Zans extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,11 @@ class Posts extends Migration
      */
     public function up()
     {
-        Schema::create('posts', function (Blueprint $table) {
+        Schema::create('zans', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('title');
-            $table->string('subhead');
-            $table->string('content');
+            $table->string('zan');
             $table->string('user_id');
+            $table->string('post_id');
             $table->timestamps();
         });
     }
@@ -30,6 +29,6 @@ class Posts extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('posts');
+        Schema::dropIfExists('zans');
     }
 }

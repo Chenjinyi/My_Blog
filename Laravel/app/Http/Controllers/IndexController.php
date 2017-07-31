@@ -9,7 +9,7 @@ class IndexController extends Controller
 {
     //BLOG 主页
     public function index(){
-        $posts = Posts::all();
+        $posts = Posts::all()->sortByDesc('created_at');
         return view('index',compact('posts'));
     }
     //BLOG 文章
