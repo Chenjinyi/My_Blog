@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Posts;
+use App\Update;
 use Illuminate\Http\Request;
+use YuanChao\Editor\EndaEditor;
 
 class HomeController extends Controller
 {
@@ -24,11 +26,17 @@ class HomeController extends Controller
      */
     public function index()
     {
+        $version = Update::all()->max();
         $posts = Posts::all();
         $view = 0;
         foreach ($posts as $val){
            $view += $val->view;
         }
-        return view('home',compact('posts','view'));
+        return view('home',compact('posts','view','version'));
+    }
+    public function update(){
+        $update = Update::all();
+        return view('home.update',compact('update'));
     }
 }
+

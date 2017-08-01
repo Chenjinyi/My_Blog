@@ -31,8 +31,5 @@ Route::get('/home/{posts}/edit','PostsController@edit')->middleware('auth');
 Route::post('/home/update','PostsController@update')->middleware('auth');
 //文章删除
 Route::get('/home/{posts}/del','PostsController@del')->middleware('auth');
-
-//Markdown
-Route::get('/home/markdown',function (){
-    return view('markdown');
-});
+//更新记录
+Route::get('/home/update','HomeController@update')->middleware('auth');

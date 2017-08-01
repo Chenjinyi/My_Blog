@@ -82,7 +82,7 @@
                 </li>
 
                 <li>
-                    <a href="tab-panel.html"><i class="fa fa-qrcode"></i> 开发目录</a>
+                    <a href="/home/update"><i class="fa fa-qrcode"></i> 更新记录</a>
                 </li>
                 <!--
 
