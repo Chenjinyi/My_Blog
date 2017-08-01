@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title> {{--Title--}} </title>
+    <title> |Franary Blog </title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Free HTML5 Website Template by freehtml5.co" />
     <meta name="keywords" content="free website templates, free html5, free template, free bootstrap, free website template, html5, css3, mobile first, responsive" />
@@ -65,18 +65,15 @@
             <div class="fh5co-entry padding">
                 <div>
                     <p>浏览次数:{{$posts->view}}  发布时间:{{$posts->created_at}}</p>
-                       {{$posts->content}}
+                      {!!$markdown!!}
                 </div>
             </div>
-
-
-
         </div>
     </div>
 </div>
 
 <div class="fh5co-navigation">
-    <div class="fh5co-cover prev fh5co-cover-sm" style="background-image: url(/images/project-4.jpg)">
+    <div class="fh5co-cover prev fh5co-cover-sm" style="background-image: url(/images/pro-4.jpg)">
         <div class="overlay"></div>
 
         <a class="copy" href="/posts/{{$posts->id-1}}">
@@ -91,7 +88,7 @@
         </a>
 
     </div>
-    <div class="fh5co-cover next fh5co-cover-sm" style="background-image: url(/images/project-5.jpg)">
+    <div class="fh5co-cover next fh5co-cover-sm" style="background-image: url(/images/pro-5.jpg)">
         <div class="overlay"></div>
         <a class="copy" href="/posts/{{$posts->id+1}}">
             <div class="display-t">

@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "0af0629734a8644740c6e8398744355e",
-    "content-hash": "6f0dd6563cb2160e71d23c6e99cd318d",
+    "hash": "ccfa14a2548d14211fbfc4c820971ca1",
+    "content-hash": "1e4f2649484e1271374af78038a6ea4b",
     "packages": [
         {
             "name": "caouecs/laravel-lang",
@@ -730,16 +730,16 @@
         },
         {
             "name": "nikic/php-parser",
-            "version": "v3.0.6",
+            "version": "v3.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nikic/PHP-Parser.git",
-                "reference": "0808939f81c1347a3c8a82a5925385a08074b0f1"
+                "reference": "4d4896e553f2094e657fe493506dc37c509d4e2b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/0808939f81c1347a3c8a82a5925385a08074b0f1",
-                "reference": "0808939f81c1347a3c8a82a5925385a08074b0f1",
+                "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/4d4896e553f2094e657fe493506dc37c509d4e2b",
+                "reference": "4d4896e553f2094e657fe493506dc37c509d4e2b",
                 "shasum": ""
             },
             "require": {
@@ -777,7 +777,7 @@
                 "parser",
                 "php"
             ],
-            "time": "2017-06-28 20:53:48"
+            "time": "2017-07-28 14:45:09"
         },
         {
             "name": "overtrue/laravel-lang",
@@ -920,16 +920,16 @@
         },
         {
             "name": "psy/psysh",
-            "version": "v0.8.10",
+            "version": "v0.8.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bobthecow/psysh.git",
-                "reference": "7ab97e5a32202585309f3ee35a0c08d2a8e588b1"
+                "reference": "b193cd020e8c6b66cea6457826ae005e94e6d2c0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bobthecow/psysh/zipball/7ab97e5a32202585309f3ee35a0c08d2a8e588b1",
-                "reference": "7ab97e5a32202585309f3ee35a0c08d2a8e588b1",
+                "url": "https://api.github.com/repos/bobthecow/psysh/zipball/b193cd020e8c6b66cea6457826ae005e94e6d2c0",
+                "reference": "b193cd020e8c6b66cea6457826ae005e94e6d2c0",
                 "shasum": ""
             },
             "require": {
@@ -989,7 +989,7 @@
                 "interactive",
                 "shell"
             ],
-            "time": "2017-07-22 15:14:19"
+            "time": "2017-07-29 19:30:02"
         },
         {
             "name": "ramsey/uuid",
@@ -1971,6 +1971,39 @@
                 "environment"
             ],
             "time": "2016-09-01 10:05:43"
+        },
+        {
+            "name": "yuanchao/laravel-5-markdown-editor",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/yccphp/laravel-5-markdown-editor.git",
+                "reference": "420f93671d19b6edff7bd045ed728704c4e083c2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/yccphp/laravel-5-markdown-editor/zipball/420f93671d19b6edff7bd045ed728704c4e083c2",
+                "reference": "420f93671d19b6edff7bd045ed728704c4e083c2",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "YuanChao\\Editor\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "yuanchao",
+                    "email": "653069653@qq.com"
+                }
+            ],
+            "description": "Based on the markdown editor laravel 5",
+            "time": "2016-06-06 03:00:54"
         }
     ],
     "packages-dev": [
@@ -3448,7 +3481,9 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "yuanchao/laravel-5-markdown-editor": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {

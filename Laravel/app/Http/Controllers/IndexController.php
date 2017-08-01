@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Posts;
+use YuanChao\Editor\EndaEditor;
 
 class IndexController extends Controller
 {
@@ -22,6 +23,7 @@ class IndexController extends Controller
         $view = $posts->view+1;
         $posts->view = $view;
         $posts->save();
+        $markdown = EndaEditor::MarkDecode($posts->content);
 //        //获取文章最大值与最小值
 //        $post = Posts::all();
 //        $max = $post->max();
@@ -42,7 +44,7 @@ class IndexController extends Controller
 //        //获得上一篇下一盘文章
 //        $next = Posts::find($id);
 //        $last = Posts::find($id);
-        return view('posts',compact('posts'));
+        return view('posts',compact('posts','markdown'));
     }
 }
 

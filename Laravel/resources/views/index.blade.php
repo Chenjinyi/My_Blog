@@ -63,7 +63,7 @@
         <div class="fh5co-post">
             @foreach($posts as $val)
             <div class="fh5co-entry padding">
-                <img style="height: 8em;width:8em" src="/images/project-{{@rand(1,8)}}.jpg" alt="图片未加载" >
+                <img  src="/images/project-{{@rand(0,10)}}.jpg" alt="图片未加载" >
                 <div>
                     <span class="fh5co-post-date">{{$val->created_at}}</span>
                     <h2><a href="/posts/{{$val->id}}">{{$val->title}}</a></h2>
