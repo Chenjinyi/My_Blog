@@ -10,4 +10,7 @@ class Posts extends Model
     protected $fillable = [
         'title', 'subhead', 'content','user_id',
     ];
+    public function user(){
+        return $this->belongsTo('\App\User');
+    }
 }

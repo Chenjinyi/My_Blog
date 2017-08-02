@@ -64,7 +64,7 @@
         <div class="fh5co-post">
             <div class="fh5co-entry padding">
                 <div>
-                    <p>浏览次数:{{$posts->view}}  发布时间:{{$posts->created_at}}</p>
+                    <p>作者:{{$posts->user->name}} <br>浏览次数:{{$posts->view}}  <br>发布时间:{{$posts->created_at}}</p>
                       {!!$markdown!!}
                 </div>
             </div>
