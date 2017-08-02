@@ -18,8 +18,9 @@ Route::get('/posts/{posts}','IndexController@posts');
 
 //登录 注册
 Auth::routes();
-//个人中心
+//个人中心/后台管理
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/admin', 'HomeController@index')->name('home');
 
 //添加文章
 Route::get('/home/add','PostsController@posts')->middleware('auth');
@@ -33,3 +34,12 @@ Route::post('/home/update','PostsController@update')->middleware('auth');
 Route::get('/home/{posts}/del','PostsController@del')->middleware('auth');
 //更新记录
 Route::get('/home/update','HomeController@update')->middleware('auth');
+
+//个人中心-个人信息
+Route::get('/home/my_user','UserController@user')->middleware('auth');
+Route::post('/home/my_user','UserController@update')->middleware('auth');
+//用户列表
+Route::get('/home/add/user','UserController@show')->middleware('auth');
+//添加用户
+Route::get('/home/add/user','UserController@add')->middleware('auth');
+Route::get('/home/add/user','UserController@new')->middleware('auth');

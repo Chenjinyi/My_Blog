@@ -84,16 +84,22 @@
                 <li>
                     <a href="/home/update"><i class="fa fa-qrcode"></i> 更新记录</a>
                 </li>
+
+
+                <li>
+                    <a href="/home/my_user"><i class="fa fa-table"></i> 个人信息</a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-sitemap"></i> 用户管理<span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level">
+                        <li>
+                            <a href="#">添加用户</a>
+                        </li>
+                        <li>
+                            <a href="#">用户列表</a>
+                        </li>
+                        <li>
                 <!--
-
-                <li>
-                    <a href="table.html"><i class="fa fa-table"></i> Responsive Tables</a>
-                </li>
-                <li>
-                    <a href="form.html"><i class="fa fa-edit"></i> Forms </a>
-                </li>
-
-
                 <li>
                     <a href="#"><i class="fa fa-sitemap"></i> Multi-Level Dropdown<span class="fa arrow"></span></a>
                     <ul class="nav nav-second-level">

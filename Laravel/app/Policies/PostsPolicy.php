@@ -23,4 +23,7 @@ class PostsPolicy
     {
         return $user->id === $post->user_id;
     }
+    public function adduser(User $user){
+        return $user->id == 1;
+    }
 }
