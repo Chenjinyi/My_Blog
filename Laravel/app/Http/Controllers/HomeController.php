@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Markdown;
 use App\Posts;
 use App\Update;
 use Illuminate\Http\Request;

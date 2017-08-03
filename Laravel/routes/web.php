@@ -39,7 +39,7 @@ Route::get('/home/update','HomeController@update')->middleware('auth');
 Route::get('/home/my_user','UserController@user')->middleware('auth');
 Route::post('/home/my_user','UserController@update')->middleware('auth');
 //用户列表
-Route::get('/home/add/user','UserController@show')->middleware('auth');
+Route::get('/home/user/show','UserController@show')->middleware('auth');
 //添加用户
-Route::get('/home/add/user','UserController@add')->middleware('auth');
-Route::get('/home/add/user','UserController@new')->middleware('auth');
+Route::get('/home/user/add','UserController@add')->middleware('auth');
+Route::post('/home/user/add','UserController@adduser')->middleware('auth');

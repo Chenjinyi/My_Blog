@@ -26,7 +26,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="index.html"><strong><i class="icon fa fa-plane"></i>个人中心</strong></a>
+            <a class="navbar-brand" href="/home"><strong><i class="icon fa fa-plane"></i>个人中心</strong></a>
             <div id="sideNav" href="">
                 <i class="fa fa-bars icon"></i>
             </div>
@@ -93,10 +93,10 @@
                     <a href="#"><i class="fa fa-sitemap"></i> 用户管理<span class="fa arrow"></span></a>
                     <ul class="nav nav-second-level">
                         <li>
-                            <a href="#">添加用户</a>
+                            <a href="/home/user/add">添加用户</a>
                         </li>
                         <li>
-                            <a href="#">用户列表</a>
+                            <a href="/home/user/show">用户列表</a>
                         </li>
                         <li>
                 <!--

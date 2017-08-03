@@ -2,11 +2,11 @@
 
 @section('header')
     <h1 class="page-header">
-        个人信息 <small>个人信息更改</small>
+        添加用户 <small>一个新写手YOOOO~</small>
     </h1>
     <ol class="breadcrumb">
         <li><a href="#">Home</a></li>
-        <li class="active">个人信息</li>
+        <li class="active">添加用户</li>
     </ol>
 @endsection
 
@@ -16,24 +16,23 @@
             <div class="panel panel-default">
                 <div class="panel-heading">
                     <div class="card-title">
-                        <div class="title">个人信息</div>
+                        <div class="title">添加用户</div>
                     </div>
                 </div>
-                <form action="/home/my_user" method="post">
+                <form action="/home/user/add" method="post">
                     {{csrf_field()}}
                     <div class="panel-body">
-                        <div class="form-group">
-                            <label for="exampleInputFile">更改头像</label>
-                            <img src="" alt="">
-                            <input type="file" id="image"  name="image">
-                        </div>
-                        <div class="sub-title">用户名</div>
+                        <div class="sub-title">用户邮箱</div>
                         <div>
-                            <input name="name" type="text" class="form-control" placeholder="user" value="{{Auth::User()->name}}">
+                            <input name="email" type="text" class="form-control" placeholder="email" value="{{old('email')}}">
                         </div>
-                        <div class="sub-title">密码</div>
+                        <div class="sub-title">用户名称</div>
                         <div>
-                            <input name="password" type="password" class="form-control" placeholder="不更改则留空" value="">
+                            <input name="name" type="text" class="form-control" placeholder="name" value="{{old('name')}}">
+                        </div>
+                        <div class="sub-title">用户密码</div>
+                        <div>
+                            <input name="password" type="password" class="form-control" placeholder="password" value="{{old('password')}}">
                         </div>
                         <div class="sub-title"> @include('layouts.msg')</div>
                         <button type="submit" class="btn btn-primary">提交</button>
