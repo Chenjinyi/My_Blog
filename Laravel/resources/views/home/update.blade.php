@@ -15,10 +15,10 @@
         <div class="col-md-4 col-sm-4">
             <div class="panel panel-primary">
                 <div class="panel-heading">
-                    {{$val->version}}
+                    {!! EndaEditor::MarkDecode($val->version)!!}
                 </div>
                 <div class="panel-body">
-                    <p>{!! $val->content !!}</p>
+                   <p> {!! EndaEditor::MarkDecode($val->content) !!}</p>
                 </div>
                 <div class="panel-footer">
                     {{$val->created_at}}

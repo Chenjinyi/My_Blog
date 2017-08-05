@@ -15,6 +15,9 @@
 Route::get('/','IndexController@index');
 //BLOG文章
 Route::get('/posts/{posts}','IndexController@posts');
+//错误页面
+Route::get('/error/{status}/{error}','IndexController@error');
+
 
 //登录 注册
 Auth::routes();
@@ -43,3 +46,4 @@ Route::get('/home/user/show','UserController@show')->middleware('auth');
 //添加用户
 Route::get('/home/user/add','UserController@add')->middleware('auth');
 Route::post('/home/user/add','UserController@adduser')->middleware('auth');
+

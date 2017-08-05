@@ -72,6 +72,7 @@
     </div>
 </div>
 
+
 <div class="fh5co-navigation">
     <div class="fh5co-cover prev fh5co-cover-sm" style="background-image: url(/images/pro-4.jpg)">
         <div class="overlay"></div>
@@ -106,7 +107,6 @@
 
 <footer>
     <div>
-        <p>&copy; 2017 BLOG BY FRANRY</p>
         <p>&copy; 2017 BLOG BY FRANRY</p>
     </div>
 </footer>

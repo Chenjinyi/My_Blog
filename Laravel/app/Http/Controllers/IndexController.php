@@ -46,5 +46,9 @@ class IndexController extends Controller
 //        $last = Posts::find($id);
         return view('posts',compact('posts','markdown'));
     }
+        //错误页面
+    public function error($status,$error){
+        return view('error');
+    }
 }
 

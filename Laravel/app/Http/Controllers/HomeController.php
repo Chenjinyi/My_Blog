@@ -27,7 +27,8 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $version = Update::all()->max();
+        $update = Update::all()->max();
+        $version = EndaEditor::MarkDecode($update->version);
         $posts = Posts::all();
         $view = 0;
         foreach ($posts as $val){

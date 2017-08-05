@@ -52,7 +52,7 @@
                 <div class="panel panel-primary">
                     <div class="number">
                         <h3>
-                            <h3>{{$version->version}}</h3>
+                            <h3>{!!$version!!}</h3>
                             <small>版本号</small>
                         </h3>
                     </div>
