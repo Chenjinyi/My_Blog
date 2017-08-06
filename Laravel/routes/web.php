@@ -37,6 +37,9 @@ Route::post('/home/update','PostsController@update')->middleware('auth');
 Route::get('/home/{posts}/del','PostsController@del')->middleware('auth');
 //更新记录
 Route::get('/home/update','HomeController@update')->middleware('auth');
+//推荐文章设置
+Route::get('/home/hot','PostsController@hotshow')->middleware('auth');
+Route::post('/home/hot','PostsController@hot')->middleware('auth');
 
 //个人中心-个人信息
 Route::get('/home/my_user','UserController@user')->middleware('auth');

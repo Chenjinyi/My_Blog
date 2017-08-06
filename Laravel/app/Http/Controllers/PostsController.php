@@ -7,6 +7,7 @@ use App\User;
 use Illuminate\Http\Request;
 use App\Posts;
 use Illuminate\Support\Facades\Auth;
+use App\Hot;
 
 class PostsController extends Controller
 {
@@ -80,5 +81,15 @@ class PostsController extends Controller
         return redirect('/home/show');
     }
 
+
+    //热门文章
+    public function hotshow(){
+        $hot = Hot::all();
+        return view('home.hotshow',compact('hot'));
+    }
+
+    public function hot(){
+
+    }
 }
 

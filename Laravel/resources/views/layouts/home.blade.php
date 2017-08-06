@@ -66,9 +66,17 @@
         <div class="sidebar-collapse">
             <ul class="nav" id="main-menu">
 
+
                 <li>
                     <a href="/home"><i class="fa fa-dashboard"></i>仪表盘</a>
                 </li>
+
+
+                <li>
+                    <a href="/home/my_user"><i class="fa fa-table"></i> 个人信息</a>
+                </li>
+
+
                 <li>
                     <a href="#"><i class="fa fa-sitemap"></i> 文章管理<span class="fa arrow"></span></a>
                     <ul class="nav nav-second-level">
@@ -78,17 +86,13 @@
                         <li>
                             <a href="/home/show">文章列表</a>
                         </li>
+                        <li>
+                            <a href="/home/hot">置顶文章</a>
+                        </li>
                     </ul>
                 </li>
 
-                <li>
-                    <a href="/home/update"><i class="fa fa-qrcode"></i> 更新记录</a>
-                </li>
 
-
-                <li>
-                    <a href="/home/my_user"><i class="fa fa-table"></i> 个人信息</a>
-                </li>
                 <li>
                     <a href="#"><i class="fa fa-sitemap"></i> 用户管理<span class="fa arrow"></span></a>
                     <ul class="nav nav-second-level">
@@ -98,7 +102,11 @@
                         <li>
                             <a href="/home/user/show">用户列表</a>
                         </li>
-                        <li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="/home/update"><i class="fa fa-qrcode"></i> 更新记录</a>
+                </li>
                 <!--
                 <li>
                     <a href="#"><i class="fa fa-sitemap"></i> Multi-Level Dropdown<span class="fa arrow"></span></a>
