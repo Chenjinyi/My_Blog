@@ -49,7 +49,7 @@
                     </div>
                 </div>
             </div>
-            
+
 
             <div class="row">
                 <div class="col-md-12">
@@ -64,7 +64,7 @@
                             <div class="panel-body">
                                 <div class="sub-title">文章ID</div>
                                 <div>
-                                    <input name="title" type="text" class="form-control" placeholder="文章ID" value="{{old('title')}}">
+                                    <input name="id" type="text" class="form-control" placeholder="文章ID" value="{{old('title')}}">
                                 </div>
                                 <div class="sub-title"> @include('layouts.msg')</div>
                                 <button type="submit" class="btn btn-primary">提交</button>

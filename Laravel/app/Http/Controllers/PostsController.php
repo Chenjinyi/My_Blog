@@ -88,7 +88,25 @@ class PostsController extends Controller
         return view('home.hotshow',compact('hot'));
     }
 
-    public function hot(){
+    public function hot(Request $request){
+
+        //验证
+        $this->validate($request,[
+            'id'=>'required'
+        ]);
+        //逻辑
+        $user_id = Auth::id();
+        $posts_id = $request->id;
+        if (!empty(Posts::find($posts_id))){
+            $input = new Hot();
+            $input->user_id =$user_id;
+            $input->posts_id=$posts_id;
+            $input->save();
+        } else{
+            return redirect('/error/200/找不到项目');
+            die();
+        }
+        return redirect('/home/hot');
 
     }
 }

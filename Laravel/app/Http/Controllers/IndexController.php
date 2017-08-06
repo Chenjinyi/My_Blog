@@ -47,8 +47,10 @@ class IndexController extends Controller
         return view('posts',compact('posts','markdown'));
     }
         //错误页面
-    public function error($status,$error){
-        return view('error');
+    public function error(Request $request){
+        $status=$request->status;
+        $error = $request->error;
+        return view('error',compact('status','error'));
     }
 }
 
