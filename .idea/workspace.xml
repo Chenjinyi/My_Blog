@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bdf48985-312a-4928-aa0f-5c0f3b6361d0" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Laravel/app/Http/Controllers/IndexController.php" afterPath="$PROJECT_DIR$/Laravel/app/Http/Controllers/IndexController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Laravel/app/Http/Controllers/PostsController.php" afterPath="$PROJECT_DIR$/Laravel/app/Http/Controllers/PostsController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Laravel/resources/views/home/hotshow.blade.php" afterPath="$PROJECT_DIR$/Laravel/resources/views/home/hotshow.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Laravel/resources/views/index.blade.php" afterPath="$PROJECT_DIR$/Laravel/resources/views/index.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Laravel/routes/web.php" afterPath="$PROJECT_DIR$/Laravel/routes/web.php" />
-    </list>
+    <list default="true" id="bdf48985-312a-4928-aa0f-5c0f3b6361d0" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -742,12 +735,12 @@
       <workItem from="1501947682064" duration="1918000" />
       <workItem from="1501982445032" duration="2386000" />
       <workItem from="1502051189309" duration="2860000" />
-      <workItem from="1502123236381" duration="800000" />
+      <workItem from="1502123236381" duration="1398000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20961000" />
+    <option name="totallyTimeSpent" value="21559000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1972" y="-11" width="1029" height="2572" extended-state="6" />
