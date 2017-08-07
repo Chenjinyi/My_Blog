@@ -4,7 +4,7 @@
 
 ## 简介
 
-本项目是基于Laravel bootstrap开发的个人博客
+#### 本项目是基于Laravel和bootstrap开发的个人博客
 
 ## 更新记录
 
@@ -53,3 +53,17 @@
 #### 请参考Laravel框架文件部署
 
 #### 管理员可使用数据库管理工具添加
+
+----
+
+## 开发详细
+
+#### 后端使用 Laravel框架 
+
+[https://laravel.com/](https://laravel.com/)
+
+#### 前端使用 Bootstrap 框架
+
+[http://getbootstrap.com/](http://getbootstrap.com/)
+
+#### 开发环境 Ubuntu 17.04 + PHP7.0 + MySQL5.6
