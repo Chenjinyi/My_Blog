@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Hot;
 use Illuminate\Http\Request;
 use App\Posts;
 use YuanChao\Editor\EndaEditor;
@@ -10,9 +11,13 @@ class IndexController extends Controller
 {
     //BLOG 主页
     public function index(){
+        //获取置顶文章
+        $hot= Hot::all();
+
+        //获取文章
         $posts = Posts::orderBy('created_at','desc')->paginate(8);
 
-        return view('index',compact('posts'));
+        return view('index',compact('posts','hot'));
     }
     //BLOG 文章
     public function posts(Request $request){

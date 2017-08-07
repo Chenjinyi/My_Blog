@@ -41,7 +41,7 @@
                                     <td>{{$val->posts_id}}|{{$val->posts->title}}</td>
                                     <td>{{$val -> user_id}}|{{$val->user->name}}</td>
                                     <td>{{$val -> created_at}}｜{{$val->posts->view}}</td>
-                                    <td><a href="/home/{{$val->id}}/del" onclick="del()">删除</a></td>
+                                    <td><a href="/home/hot/{{$val->id}}/del" onclick="del()">删除</a></td>
                                 </tr>
                             @endforeach
                             </tbody>

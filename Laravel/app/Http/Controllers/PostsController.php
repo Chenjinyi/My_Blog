@@ -109,5 +109,13 @@ class PostsController extends Controller
         return redirect('/home/hot');
 
     }
+
+    public function hotdel(Request $request){
+        $id = $request->posts;
+
+        Hot::find($id)->delete();
+
+        return redirect('home/hot');
+    }
 }
 

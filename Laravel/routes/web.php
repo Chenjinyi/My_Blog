@@ -40,6 +40,8 @@ Route::get('/home/update','HomeController@update')->middleware('auth');
 //推荐文章设置
 Route::get('/home/hot','PostsController@hotshow')->middleware('auth');
 Route::post('/home/hot','PostsController@hot')->middleware('auth');
+//删除推荐文章
+Route::get('/home/hot/{posts}/del','PostsController@hotdel')->middleware('auth');
 
 //个人中心-个人信息
 Route::get('/home/my_user','UserController@user')->middleware('auth');
